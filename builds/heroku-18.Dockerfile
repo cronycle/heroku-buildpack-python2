@@ -4,11 +4,9 @@ ENV WORKSPACE_DIR="/app/builds" \
     S3_BUCKET="heroku-buildpack-python" \
     S3_PREFIX="heroku-18/" \
     STACK="heroku-18"
-
+    
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
-        libsqlite3-dev \
-        python3-pip \
         libssl-dev \
         libncurses5-dev \
         libsqlite3-dev \
@@ -17,6 +15,8 @@ RUN apt-get update \
         libgdm-dev \
         libdb4o-cil-dev \
         libpcap-dev \
+        libsqlite3-dev \
+        python3-pip \
         python3-setuptools \
     && rm -rf /var/lib/apt/lists/*
 
