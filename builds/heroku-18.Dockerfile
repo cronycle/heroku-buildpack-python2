@@ -9,6 +9,14 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         libsqlite3-dev \
         python3-pip \
+        libssl-dev \
+        libncurses5-dev \
+        libsqlite3-dev \
+        libreadline-dev \
+        libtk8.6 \
+        libgdm-dev \
+        libdb4o-cil-dev \
+        libpcap-dev \
         python3-setuptools \
     && rm -rf /var/lib/apt/lists/*
 
