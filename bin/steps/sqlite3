@@ -23,7 +23,7 @@ sqlite3_install() {
 
   apt-get $APT_OPTIONS update > /dev/null 2>&1
   
-  sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+  apt install build-essential wget
 
   if [ -z "$HEADERS_ONLY" ]; then
     apt-get $APT_OPTIONS -y -d --reinstall install libsqlite3-dev sqlite3 > /dev/null 2>&1
